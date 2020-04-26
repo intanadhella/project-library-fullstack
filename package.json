@@ -1,0 +1,25 @@
+{
+  "name": "project-library-fullstack",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "backend": "cross-env MONGOURI=mongodb://localhost/library npm run dev --prefix ./backend",
+    "frontend": "cross-env REACT_APP_APIURL=http://localhost:8000 npm run start --prefix ./frontend",
+    "start": "concurrently --kill-others \"npm run backend\" \"npm run frontend\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/intanadhella/project-library-fullstack.git"
+  },
+  "author": "Intan Adela",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/intanadhella/project-library-fullstack/issues"
+  },
+  "homepage": "https://github.com/intanadhella/project-library-fullstack#readme",
+  "dependencies": {
+    "concurrently": "^5.2.0",
+    "cross-env": "^7.0.2"
+  }
+}
